@@ -1,28 +1,59 @@
-# PrimengMoviesDb
+# Configurando PrimeNG
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+```
+ng new seu-projeto
+npm i primeng --save
+npm i primeicons --save
+npm i primeflex --save
+```
 
-## Development server
+## 2. Configurar angular.json
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+No arquivo angular.json, editar styles:
 
-## Code scaffolding
+```
+"styles": [
+              "src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
+            ],
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+No arquivo global de styles do projeto:
 
-## Build
+```
+@import "primeng/resources/primeng.min.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css"
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+ng serve
+```
 
-## Running unit tests
+## 3. Gerar Modulos em lazy loading
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+```
+ng g m exemplo --routing
+ng g c exemplo/componente
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+No arquivo de roteamento na raiz do projeto criar rota de redirecionamento em lazy loading:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# primeng-movies-db
+```
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'exemplo',
+    pathMatch: 'full',
+  },
+  {
+    path: 'exemplo',
+    loadChildren: () => import('./exemplo/exemplo.module').then(m => m.ExemploModule)
+  }
+];
+```
