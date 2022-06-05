@@ -9,8 +9,18 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login-movies/login-movies.module').then(m => m.LoginMoviesModule)
-  }
+    loadChildren: () =>
+      import('./login-movies/login-movies.module').then(
+        (m) => m.LoginMoviesModule
+      ),
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./movies-dashboard/movies-dashboard.module').then(
+        (m) => m.MoviesDashboardModule
+      ),
+  },
 ];
 
 @NgModule({

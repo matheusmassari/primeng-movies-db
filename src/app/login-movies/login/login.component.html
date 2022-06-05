@@ -1,1 +1,63 @@
-<p>login works!</p>
+
+<div
+  class="page-wrapper"
+  [style.background-image]="
+    'url(assets/cover.png)'
+  "
+>
+  <div class="middle">
+    <div class="inner">
+      <div
+        class="surface-card p-4 shadow-2 border-round m-auto xl:w-3 lg:w-4"
+        id="card"
+        
+      >
+        <div class="text-center mb-5">
+          <!-- <img src="assets/logo.svg" alt="Image" height="150" /> -->
+          <p class="titulo">Movies DB App</p>
+        </div>
+
+        <div>
+          <span class="p-float-label mb-5">
+            <input id="float-input" type="text" class="w-full" pInputText />
+            <label for="float-input">Usuário</label>
+          </span>
+
+          <span class="p-float-label mb-3">
+            <input
+              
+              id="float-input"
+              type="password"
+              class="w-full"
+              pInputText
+            />
+            <label for="float-input">Senha</label>
+          </span>
+          <div class="flex align-items-center justify-content-between mb-6">
+            <div class="flex align-items-center">
+                <input type="checkbox" class="checkbox">
+                <label for="rememberme1" class="text-900">Lembrar</label>
+            </div>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              pButton
+              pRipple
+              label="Entrar"
+              icon="pi pi-user"
+              class="w-5 p-button-primary"
+              (click)="goToPage('dashboard')"                   
+            ></button>
+            <p-progressSpinner
+              *ngIf="isLoading"
+              [style]="{ width: '3rem', height: '3rem' }"
+            ></p-progressSpinner> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
