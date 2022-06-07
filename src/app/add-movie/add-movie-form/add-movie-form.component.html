@@ -6,7 +6,9 @@
         id="card"
       >
         <div class="text-center mb-5">
-          <p class="titulo">Adicionar Filme</p>
+          <p class="titulo">
+            {{ btnLabel === "Cadastrar" ? "Adicionar" : "Atualizar" }} Filme
+          </p>
         </div>
         <form [formGroup]="movieForm" *ngIf="!success">
           <div>
@@ -32,15 +34,18 @@
               <label for="float-input">Nota</label>
             </span>
 
+            <!-- SELECT INPUT -->
             <div class="mb-5">
-              <p-multiSelect
+              <p-dropdown
                 [options]="genres"
                 formControlName="genre"
                 optionLabel="name"
                 optionValue="name"
                 placeholder="Genero"
-              ></p-multiSelect>
+                styleClass="dd-style"
+              ></p-dropdown>
             </div>
+            <!--  -->
 
             <span class="p-float-label mb-5">
               <input
@@ -118,7 +123,8 @@
           </div>
         </div>
 
-        <p>{{ movieForm.value | json }}</p>
+        <!-- <p>{{ movieForm.value | json }}</p> -->
+        
       </div>
     </div>
   </div>

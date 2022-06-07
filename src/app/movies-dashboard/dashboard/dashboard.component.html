@@ -37,7 +37,17 @@
             <img alt="Card" src="{{ movie.image_url }}" />
           </ng-template>
           <div class="conteudo">
-            <h3>Sinopse:</h3>
+            <div class="btn-wrapper">
+              <h3>Sinopse:</h3>
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-heart"
+                class="p-button-rounded p-button-help p-button-text mt-1"
+                (click)="addToFavorites(movie.id)"
+              ></button>
+            </div>
             <p>
               {{ movie.overview }}
             </p>
@@ -52,6 +62,7 @@
                 label="Editar"
                 class="p-button-outlined p-button-rounded p-button-help"
               ></button>
+
               <button
                 (click)="deleteMovie(movie.id)"
                 pButton

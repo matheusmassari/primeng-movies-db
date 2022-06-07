@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap");
 
 .titulo {
-    font-family: 'Londrina Outline', cursive;
-    font-size: 3rem;
-    color: red;
-    margin-top: 0.5rem;
+  font-family: "Londrina Outline", cursive;
+  font-size: 3rem;
+  color: red;
+  margin-top: 0.5rem;
 }
 
 .page-wrapper {
@@ -17,13 +17,18 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+}
+
+:host ::ng-deep {
+  .dd-style {
+    width: 100%;
+  }
 }
 
 .btn-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .middle {
@@ -37,5 +42,5 @@
 }
 
 #card {
-    background-color: rgba(255,255,255,0.8) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }

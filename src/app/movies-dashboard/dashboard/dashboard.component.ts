@@ -13,7 +13,9 @@ export class DashboardComponent implements OnInit {
 
   items: MenuItem[] = [];
   moviesArray = [];
+  moviesFavorites: any = [];
   searchMovie: any;
+  isFavorite: boolean = true;
 
   cardStyle = {
     background: '#f5f5f5',
@@ -39,7 +41,6 @@ export class DashboardComponent implements OnInit {
     this.api.getAllMovies().subscribe({
       next: (res) => {
         this.moviesArray = res;
-        console.log(this.moviesArray);
       },
       error: () => alert('Erro ao buscar lista de filmes'),
     });
@@ -56,6 +57,24 @@ export class DashboardComponent implements OnInit {
   }
 
   editMovie(pizzaId: number) {
-    this.router.navigate(['edit-pizza', pizzaId]);
+    this.router.navigate(['add-movie', pizzaId]);
+  }
+
+  addToFavorites(id: any) {
+    let existsMovie: any = this.moviesFavorites.find((singleMovie: any) => {
+      return singleMovie.id === id;
+    });
+    if (existsMovie) {
+      let newFavorites = this.moviesFavorites.filter(
+        (element: any) => element.id !== id
+      );
+      this.moviesFavorites = newFavorites;
+    } else {
+      let tempMovie: any = this.moviesArray.find((singleMovie: any) => {
+        return singleMovie.id === id;
+      });
+      this.moviesFavorites.push(tempMovie);
+    }
+    console.log(this.moviesFavorites);
   }
 }

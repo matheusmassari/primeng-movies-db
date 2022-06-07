@@ -24,9 +24,10 @@ export class AddMovieFormComponent implements OnInit {
   movieForm!: FormGroup;
   success: boolean = false;
   btnLabel: string = 'Cadastrar';
+  
   id!: number;
   genres!: Genre[];
-  selectedGenre!: string;
+  selectedGenre!: Genre;
 
   ngOnInit(): void {
     this.movieForm = this.fb.group({
@@ -51,7 +52,7 @@ export class AddMovieFormComponent implements OnInit {
         name: 'Anime',
       },
     ];
-    
+
     this._arouter.paramMap.subscribe((params) => {
       const empId = params.get('id');
       if (empId) {
@@ -96,10 +97,11 @@ export class AddMovieFormComponent implements OnInit {
 
   editMovieInfo(editInfo: any) {
     this.movieForm.patchValue({
-      name: editInfo.name,
-      imageUrl: editInfo.imageUrl,
-      price: editInfo.price,
-      ingredients: editInfo.ingredients,
+      original_title: editInfo.original_title,
+      image_url: editInfo.image_url,
+      overview: editInfo.overview,
+      rating: editInfo.rating,
+      genre: editInfo.genre,
     });
   }
 
