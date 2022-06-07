@@ -1,0 +1,127 @@
+<div class="page-wrapper">
+  <div class="middle">
+    <div class="inner">
+      <div
+        class="surface-card p-4 shadow-2 border-round m-auto xl:w-3 lg:w-4"
+        id="card"
+      >
+        <div class="text-center mb-5">
+          <p class="titulo">Adicionar Filme</p>
+        </div>
+        <form [formGroup]="movieForm" *ngIf="!success">
+          <div>
+            <span class="p-float-label mb-5">
+              <input
+                id="float-input"
+                type="text"
+                class="w-full"
+                formControlName="original_title"
+                pInputText
+              />
+              <label for="float-input">Titulo</label>
+            </span>
+
+            <span class="p-float-label mb-5">
+              <input
+                id="float-input"
+                type="text"
+                class="w-full"
+                formControlName="rating"
+                pInputText
+              />
+              <label for="float-input">Nota</label>
+            </span>
+
+            <div class="mb-5">
+              <p-multiSelect
+                [options]="genres"
+                formControlName="genre"
+                optionLabel="name"
+                optionValue="name"
+                placeholder="Genero"
+              ></p-multiSelect>
+            </div>
+
+            <span class="p-float-label mb-5">
+              <input
+                id="float-input"
+                type="text"
+                class="w-full"
+                formControlName="image_url"
+                pInputText
+              />
+              <label for="float-input">Url da Capa</label>
+            </span>
+            <span class="p-float-label mb-5">
+              <textarea
+                id="float-input"
+                class="w-full"
+                style="height: 7rem"
+                pInputTextarea
+                formControlName="overview"
+              ></textarea>
+              <label for="float-input">Sinopse</label>
+            </span>
+
+            <div class="btn-wrapper">
+              <button
+                pButton
+                pRipple
+                label="Voltar"
+                class="w-4 p-button-secondary"
+                (click)="goToPage('dashboard')"
+              ></button>
+              <button
+                pButton
+                pRipple
+                [label]="btnLabel"
+                icon="pi pi-plus"
+                class="w-6 p-button-help"
+                (click)="addMovie()"
+                *ngIf="btnLabel === 'Cadastrar'"
+              ></button>
+              <button
+                pButton
+                pRipple
+                [label]="btnLabel"
+                icon="pi pi-plus"
+                class="w-6 p-button-help"
+                (click)="updateMovie()"
+                *ngIf="btnLabel === 'Atualizar'"
+              ></button>
+            </div>
+          </div>
+        </form>
+        <div *ngIf="success">
+          <p-messages severity="success">
+            <ng-template pTemplate>
+              <img src="assets/images/success.svg" width="32" />
+              <div class="ml-2">Pizza cadastrada com successo!</div>
+            </ng-template>
+          </p-messages>
+          <div class="btn-wrapper">
+            <button
+              pButton
+              pRipple
+              label="Dashboard"
+              class="w-5 p-button-secondary"
+              (click)="goToPage('dashboard')"
+            ></button>
+            <button
+              pButton
+              pRipple
+              label="Nova Pizza"
+              icon="pi pi-plus"
+              class="w-6 p-button-help"
+              (click)="newForm()"
+            ></button>
+          </div>
+        </div>
+
+        <p>{{ movieForm.value | json }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

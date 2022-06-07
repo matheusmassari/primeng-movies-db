@@ -1,19 +1,108 @@
 {
-  "posts": [
+  "movies": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "original_title": "Waking Life",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Sci-fi",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BMTg4NTk5NjU2OV5BMl5BanBnXkFtZTYwNzU3Nzk4._V1_.jpg"
+    },
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "original_title": "A Scanner Darkly",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Sci-fi",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/I/51ZD3951RGL.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "Swiss Army Man",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Sci-fi",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BMTk0OTEyMjM1OF5BMl5BanBnXkFtZTgwMzMzODM4ODE@._V1_.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "Princess Mononoke",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Anime",
+      "image_url": "https://m.media-amazon.com/images/I/91yyhjCmk3L._AC_SL1500_.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "Holy Motors",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Anime",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/b85e0c90df4a1c0949892bf6b6dd96cacdf205e20ae25e75863a5626ebcfc564._RI_V_TTW_.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "The Double",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Anime",
+      "image_url": "https://m.media-amazon.com/images/I/81WPWw4KoeL._AC_SY445_.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "99 Francs",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Anime",
+      "image_url": "https://i.pinimg.com/originals/b9/5c/de/b95cdeb20199bb6309516ae015f86d1a.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "Oss 117",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Anime",
+      "image_url": "https://m.media-amazon.com/images/I/51jD0qviNAL._AC_.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "Desmundo",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Anime",
+      "image_url": "https://upload.wikimedia.org/wikipedia/pt/5/5c/Desmundo_%282002%29_Film_Poster.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "Relatos Selvajes",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Anime",
+      "image_url": "https://cdn.mercidisco.com.br/image/cache/data/Relatos%20Selvagens-800x800.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "From Dusk Til Dawn",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Anime",
+      "image_url": "https://m.media-amazon.com/images/I/517ESWW8VSL._AC_.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "Howl's Moving Castle",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Anime",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/I/81Mn91Y+XyL.jpg"
+    },
+    {
+      "id": 1,
+      "original_title": "Mind Game",
+      "overview": "Lorem Ipsum",
+      "rating": "4.9",
+      "genre": "Anime",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BNzFlMDI1ZjctMzgzYy00YmVkLTlmMTMtNDZmZmVmMzk3MzNhXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_.jpg"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

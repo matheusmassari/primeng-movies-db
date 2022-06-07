@@ -21,6 +21,11 @@ const routes: Routes = [
         (m) => m.MoviesDashboardModule
       ),
   },
+  {
+    path: 'add-movie',
+    loadChildren: () =>
+      import('./add-movie/add-movie.module').then((m) => m.AddMovieModule),
+  },
 ];
 
 @NgModule({
