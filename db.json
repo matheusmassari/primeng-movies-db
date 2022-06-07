@@ -6,7 +6,8 @@
       "rating": "4.9",
       "genre": "Sci-fi",
       "image_url": "https://m.media-amazon.com/images/M/MV5BMTg4NTk5NjU2OV5BMl5BanBnXkFtZTYwNzU3Nzk4._V1_.jpg",
-      "id": 1
+      "id": 1,
+      "isFavorite": false
     },
     {
       "original_title": "A Scanner Darkly",
@@ -14,7 +15,8 @@
       "rating": "4.9",
       "genre": "Sci-fi",
       "image_url": "https://images-na.ssl-images-amazon.com/images/I/51ZD3951RGL.jpg",
-      "id": 2
+      "id": 2,
+      "isFavorite": false
     },
     {
       "original_title": "Swiss Army Man",
@@ -22,7 +24,8 @@
       "rating": "4.9",
       "genre": "Sci-fi",
       "image_url": "https://m.media-amazon.com/images/M/MV5BMTk0OTEyMjM1OF5BMl5BanBnXkFtZTgwMzMzODM4ODE@._V1_.jpg",
-      "id": 3
+      "id": 3,
+      "isFavorite": false
     },
     {
       "original_title": "Princess Mononoke",
@@ -30,7 +33,8 @@
       "rating": "4.9",
       "genre": "Anime",
       "image_url": "https://m.media-amazon.com/images/I/91yyhjCmk3L._AC_SL1500_.jpg",
-      "id": 4
+      "id": 4,
+      "isFavorite": false
     },
     {
       "original_title": "Holy Motors",
@@ -38,7 +42,8 @@
       "rating": "4.9",
       "genre": "Anime",
       "image_url": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/b85e0c90df4a1c0949892bf6b6dd96cacdf205e20ae25e75863a5626ebcfc564._RI_V_TTW_.jpg",
-      "id": 5
+      "id": 5,
+      "isFavorite": false
     },
     {
       "original_title": "The Double",
@@ -46,7 +51,8 @@
       "rating": "4.9",
       "genre": "Anime",
       "image_url": "https://m.media-amazon.com/images/I/81WPWw4KoeL._AC_SY445_.jpg",
-      "id": 6
+      "id": 6,
+      "isFavorite": false
     },
     {
       "original_title": "99 Francs",
@@ -54,7 +60,8 @@
       "rating": "4.9",
       "genre": "Anime",
       "image_url": "https://i.pinimg.com/originals/b9/5c/de/b95cdeb20199bb6309516ae015f86d1a.jpg",
-      "id": 7
+      "id": 7,
+      "isFavorite": false
     },
     {
       "original_title": "Oss 117",
@@ -62,7 +69,8 @@
       "rating": "4.9",
       "genre": "Anime",
       "image_url": "https://m.media-amazon.com/images/I/51jD0qviNAL._AC_.jpg",
-      "id": 8
+      "id": 8,
+      "isFavorite": false
     },
     {
       "original_title": "Desmundo",
@@ -70,7 +78,8 @@
       "rating": "4.9",
       "genre": "Anime",
       "image_url": "https://upload.wikimedia.org/wikipedia/pt/5/5c/Desmundo_%282002%29_Film_Poster.jpg",
-      "id": 9
+      "id": 9,
+      "isFavorite": false
     },
     {
       "original_title": "Relatos Selvajes",
@@ -78,7 +87,8 @@
       "rating": "4.9",
       "genre": "Anime",
       "image_url": "https://cdn.mercidisco.com.br/image/cache/data/Relatos%20Selvagens-800x800.jpg",
-      "id": 10
+      "id": 10,
+      "isFavorite": false
     },
     {
       "original_title": "From Dusk Til Dawn",
@@ -86,7 +96,8 @@
       "rating": "4.9",
       "genre": "Anime",
       "image_url": "https://m.media-amazon.com/images/I/517ESWW8VSL._AC_.jpg",
-      "id": 11
+      "id": 11,
+      "isFavorite": false
     },
     {
       "original_title": "Howl's Moving Castle",
@@ -94,7 +105,8 @@
       "rating": "4.9",
       "genre": "Anime",
       "image_url": "https://images-na.ssl-images-amazon.com/images/I/81Mn91Y+XyL.jpg",
-      "id": 12
+      "id": 12,
+      "isFavorite": false
     },
     {
       "original_title": "Mind Game",
@@ -102,7 +114,8 @@
       "rating": "4.9",
       "genre": "Anime",
       "image_url": "https://m.media-amazon.com/images/M/MV5BNzFlMDI1ZjctMzgzYy00YmVkLTlmMTMtNDZmZmVmMzk3MzNhXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_.jpg",
-      "id": 13
+      "id": 13,
+      "isFavorite": false
     },
     {
       "original_title": "Space Odyssey",
@@ -110,7 +123,8 @@
       "rating": "8.9",
       "genre": "Sci-fi",
       "image_url": "https://m.media-amazon.com/images/I/61VMT6lqBDL._AC_SY741_.jpg",
-      "id": 2
+      "id": 14,
+      "isFavorite": false
     }
   ]
 }

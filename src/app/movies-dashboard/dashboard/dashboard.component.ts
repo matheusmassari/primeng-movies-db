@@ -11,15 +11,17 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
   constructor(private api: ApiService, private router: Router) {}
 
+  // Navbar e Tabs //
   items: MenuItem[] = [];
+  tabItems: MenuItem[] = [];
+  activeTab!: MenuItem;
+
+  // Lista de filmes total e Favoritos
   moviesArray = [];
   moviesFavorites: any = [];
-  searchMovie: any;
-  isFavorite: boolean = true;
 
-  cardStyle = {
-    background: '#f5f5f5',
-  };
+  //Filtro sobre todos os filmes
+  searchMovie: any;
 
   ngOnInit(): void {
     this.items = [
@@ -34,6 +36,19 @@ export class DashboardComponent implements OnInit {
         command: () => this.router.navigate(['login']),
       },
     ];
+    this.tabItems = [
+      {
+        label: 'Lista Principal',
+        icon: 'pi pi-list',
+        command: () => (this.activeTab = this.tabItems[0]),
+      },
+      {
+        label: 'Filmes Favoritos',
+        icon: 'pi pi-star-fill',
+        command: () => (this.activeTab = this.tabItems[1]),
+      },
+    ];
+    this.activeTab = this.tabItems[0]
     this.getAllMovies();
   }
 
@@ -61,20 +76,22 @@ export class DashboardComponent implements OnInit {
   }
 
   addToFavorites(id: any) {
-    let existsMovie: any = this.moviesFavorites.find((singleMovie: any) => {
-      return singleMovie.id === id;
-    });
+    let existsMovie: any = this.moviesFavorites.find(
+      (singleMovie: any) => singleMovie.id === id
+    );
     if (existsMovie) {
+      existsMovie.isFavorite = false;
       let newFavorites = this.moviesFavorites.filter(
         (element: any) => element.id !== id
       );
       this.moviesFavorites = newFavorites;
     } else {
-      let tempMovie: any = this.moviesArray.find((singleMovie: any) => {
-        return singleMovie.id === id;
-      });
+      let tempMovie: any = this.moviesArray.find(
+        (singleMovie: any) => singleMovie.id === id
+      );
+      tempMovie.isFavorite = true;
       this.moviesFavorites.push(tempMovie);
     }
-    console.log(this.moviesFavorites);
+    // console.log(this.moviesFavorites);
   }
 }

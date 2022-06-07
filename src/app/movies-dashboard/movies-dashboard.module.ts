@@ -10,6 +10,8 @@ import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
+import { TabMenuModule } from 'primeng/tabmenu';
+
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -27,6 +29,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     FlexLayoutModule,
     Ng2SearchPipeModule,
+    TabMenuModule,
+
   ],
 })
 export class MoviesDashboardModule {}

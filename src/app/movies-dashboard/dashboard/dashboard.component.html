@@ -4,7 +4,12 @@
 <!-- <input type="text" style="margin-bottom: 5rem;"> -->
 
 <div class="page-wrapper">
-  <p-menubar [model]="items" [style]="cardStyle">
+  <p-menubar
+    [model]="items"
+    [style]="{
+      background: '#f5f5f5'
+    }"
+  >
     <ng-template pTemplate="start">
       <img src="assets/logo.svg" class="mr-2 ml-4 pizzaIcon" />
     </ng-template>
@@ -18,9 +23,13 @@
       />
     </ng-template>
   </p-menubar>
-
+  <p-tabMenu [model]="tabItems" [activeItem]="activeTab"></p-tabMenu>
   <div class="content">
-    <div fxLayout="row wrap" fxLayoutGap="1rem grid">
+    <div
+      fxLayout="row wrap"
+      fxLayoutGap="1rem grid"
+      *ngIf="activeTab === tabItems[0]"
+    >
       <div
         fxFlex="25%"
         fxFlex.md="50%"
@@ -31,7 +40,9 @@
         <p-card
           header="{{ movie.original_title }}"
           styleClass="p-card-shadow"
-          [style]="cardStyle"
+          [style]="{
+            background: '#f5f5f5'
+          }"
         >
           <ng-template pTemplate="header">
             <img alt="Card" src="{{ movie.image_url }}" />
@@ -39,14 +50,75 @@
           <div class="conteudo">
             <div class="btn-wrapper">
               <h3>Sinopse:</h3>
+              <button type="button" (click)="addToFavorites(movie.id)">
+                <i
+                  class="pi"
+                  [class.pi-heart-fill]="movie.isFavorite"
+                  [class.pi-heart]="!movie.isFavorite"
+                ></i>
+              </button>
+            </div>
+            <p>
+              {{ movie.overview }}
+            </p>
+          </div>
+          <ng-template pTemplate="footer">
+            <div class="btn-wrapper">
               <button
+                (click)="editMovie(movie.id)"
                 pButton
                 pRipple
                 type="button"
-                icon="pi pi-heart"
-                class="p-button-rounded p-button-help p-button-text mt-1"
-                (click)="addToFavorites(movie.id)"
+                label="Editar"
+                class="p-button-outlined p-button-rounded p-button-help"
               ></button>
+
+              <button
+                (click)="deleteMovie(movie.id)"
+                pButton
+                pRipple
+                type="button"
+                label="Remover"
+                class="p-button-outlined p-button-rounded p-button-danger"
+              ></button>
+            </div>
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+    <!-- PRINCIPAL / FAVORITOS -->
+    <div
+      fxLayout="row wrap"
+      fxLayoutGap="1rem grid"
+      *ngIf="activeTab === tabItems[1]"
+    >
+      <div
+        fxFlex="25%"
+        fxFlex.md="50%"
+        fxFlex.sm="50%"
+        fxFlex.xs="100%"
+        *ngFor="let movie of moviesFavorites | filter: searchMovie"
+      >
+        <p-card
+          header="{{ movie.original_title }}"
+          styleClass="p-card-shadow"
+          [style]="{
+            background: '#f5f5f5'
+          }"
+        >
+          <ng-template pTemplate="header">
+            <img alt="Card" src="{{ movie.image_url }}" />
+          </ng-template>
+          <div class="conteudo">
+            <div class="btn-wrapper">
+              <h3>Sinopse:</h3>
+              <button type="button" (click)="addToFavorites(movie.id)">
+                <i
+                  class="pi"
+                  [class.pi-heart-fill]="movie.isFavorite"
+                  [class.pi-heart]="!movie.isFavorite"
+                ></i>
+              </button>
             </div>
             <p>
               {{ movie.overview }}
