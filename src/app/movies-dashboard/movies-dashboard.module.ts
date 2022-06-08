@@ -16,6 +16,7 @@ import { MessageService } from 'primeng/api';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ChipModule } from 'primeng/chip';
 
 @NgModule({
   declarations: [DashboardComponent],
@@ -32,6 +33,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     Ng2SearchPipeModule,
     TabMenuModule,
     ToastModule,
+    ChipModule,
   ],
   providers: [MessageService],
 })

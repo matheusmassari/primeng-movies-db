@@ -51,18 +51,26 @@
           <div class="conteudo">
             <div class="btn-wrapper">
               <h3>Sinopse:</h3>
-              <button type="button" (click)="addToFavorites(movie.id)" class="fav-btn">
+              <button
+                type="button"
+                (click)="addToFavorites(movie.id)"
+                class="fav-btn"
+              >
                 <i
                   class="pi"
                   [class.pi-heart-fill]="movie.isFavorite"
                   [class.pi-heart]="!movie.isFavorite"
-                  style="font-size: 30px;"
+                  style="font-size: 30px"
                 ></i>
               </button>
             </div>
             <p>
               {{ movie.overview }}
             </p>
+            <h3>Rating: {{ movie.rating }}</h3>
+            <div *ngFor="let category of movie.genre" class="genre-wrapper">
+              <p-chip label="{{category}}"></p-chip>
+            </div>
           </div>
           <ng-template pTemplate="footer">
             <div class="btn-wrapper">
@@ -114,18 +122,24 @@
           <div class="conteudo">
             <div class="btn-wrapper">
               <h3>Sinopse:</h3>
-              <button type="button" (click)="addToFavorites(movie.id)" class="fav-btn">
+              <button
+                type="button"
+                (click)="addToFavorites(movie.id)"
+                class="fav-btn"
+              >
                 <i
                   class="pi"
                   [class.pi-heart-fill]="movie.isFavorite"
                   [class.pi-heart]="!movie.isFavorite"
-                  style="font-size: 30px;"
+                  style="font-size: 30px"
                 ></i>
               </button>
             </div>
             <p>
               {{ movie.overview }}
             </p>
+            <h3>Rating: {{ movie.rating }}</h3>
+            <p-chip label="Text Only"></p-chip>
           </div>
           <ng-template pTemplate="footer">
             <div class="btn-wrapper">
