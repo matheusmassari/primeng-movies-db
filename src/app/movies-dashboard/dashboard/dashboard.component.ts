@@ -52,6 +52,11 @@ export class DashboardComponent implements OnInit {
         icon: 'pi pi-star-fill',
         command: () => (this.activeTab = this.tabItems[1]),
       },
+      {
+        label: 'Top Favoritos',
+        icon: 'pi pi-filter',
+        command: () => this.ordenaFilmes(),
+      },
     ];
     this.activeTab = this.tabItems[0];
     this.getAllMovies();
@@ -108,5 +113,17 @@ export class DashboardComponent implements OnInit {
       summary: 'Filme Removido',
       detail: `${title} Removido com Sucesso.`,
     });
+  }
+
+  ordenaFilmes() {
+    let tempMovies = [...this.moviesArray]
+     this.moviesArray = tempMovies.sort(
+       (current: any, next: any) => next.rating - current.rating
+     );
+    
+    let tempFavs = [...this.moviesFavorites]
+    this.moviesFavorites = tempFavs.sort(
+      (current: any, next: any) => next.rating - current.rating
+    );
   }
 }
