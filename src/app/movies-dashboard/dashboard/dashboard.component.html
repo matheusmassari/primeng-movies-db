@@ -23,6 +23,7 @@
       />
     </ng-template>
   </p-menubar>
+  <p-toast position="bottom-right" styleClass="custom-toast"></p-toast>
   <p-tabMenu [model]="tabItems" [activeItem]="activeTab"></p-tabMenu>
   <div class="content">
     <div
@@ -50,11 +51,12 @@
           <div class="conteudo">
             <div class="btn-wrapper">
               <h3>Sinopse:</h3>
-              <button type="button" (click)="addToFavorites(movie.id)">
+              <button type="button" (click)="addToFavorites(movie.id)" class="fav-btn">
                 <i
                   class="pi"
                   [class.pi-heart-fill]="movie.isFavorite"
                   [class.pi-heart]="!movie.isFavorite"
+                  style="font-size: 30px;"
                 ></i>
               </button>
             </div>
@@ -74,7 +76,7 @@
               ></button>
 
               <button
-                (click)="deleteMovie(movie.id)"
+                (click)="deleteMovie(movie.id, movie.original_title)"
                 pButton
                 pRipple
                 type="button"
@@ -112,11 +114,12 @@
           <div class="conteudo">
             <div class="btn-wrapper">
               <h3>Sinopse:</h3>
-              <button type="button" (click)="addToFavorites(movie.id)">
+              <button type="button" (click)="addToFavorites(movie.id)" class="fav-btn">
                 <i
                   class="pi"
                   [class.pi-heart-fill]="movie.isFavorite"
                   [class.pi-heart]="!movie.isFavorite"
+                  style="font-size: 30px;"
                 ></i>
               </button>
             </div>
@@ -136,7 +139,7 @@
               ></button>
 
               <button
-                (click)="deleteMovie(movie.id)"
+                (click)="deleteMovie(movie.id, movie.original_title)"
                 pButton
                 pRipple
                 type="button"

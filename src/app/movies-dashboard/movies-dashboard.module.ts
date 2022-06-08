@@ -11,7 +11,8 @@ import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { TabMenuModule } from 'primeng/tabmenu';
-
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -30,7 +31,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule,
     Ng2SearchPipeModule,
     TabMenuModule,
-
+    ToastModule,
   ],
+  providers: [MessageService],
 })
 export class MoviesDashboardModule {}

@@ -24,7 +24,7 @@ export class AddMovieFormComponent implements OnInit {
   movieForm!: FormGroup;
   success: boolean = false;
   btnLabel: string = 'Cadastrar';
-  
+
   id!: number;
   genres!: Genre[];
   selectedGenre!: Genre;
@@ -49,7 +49,28 @@ export class AddMovieFormComponent implements OnInit {
         name: 'Drama',
       },
       {
-        name: 'Anime',
+        name: 'Romance',
+      },
+      {
+        name: 'Animation',
+      },
+      {
+        name: 'Fantasy',
+      },
+      {
+        name: 'Mystery',
+      },
+      {
+        name: 'Thriller',
+      },
+      {
+        name: 'Action',
+      },
+      {
+        name: 'Crime',
+      },
+      {
+        name: 'Comedy',
       },
     ];
 

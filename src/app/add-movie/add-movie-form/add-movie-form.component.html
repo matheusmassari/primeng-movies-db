@@ -1,4 +1,7 @@
-<div class="page-wrapper">
+<div
+  class="page-wrapper"
+  [style.background-image]="'url(assets/cinema.jpg)'"
+>
   <div class="middle">
     <div class="inner">
       <div
@@ -36,14 +39,14 @@
 
             <!-- SELECT INPUT -->
             <div class="mb-5">
-              <p-dropdown
+              <p-multiSelect
                 [options]="genres"
                 formControlName="genre"
                 optionLabel="name"
                 optionValue="name"
                 placeholder="Genero"
                 styleClass="dd-style"
-              ></p-dropdown>
+              ></p-multiSelect>
             </div>
             <!--  -->
 
@@ -100,8 +103,8 @@
         <div *ngIf="success">
           <p-messages severity="success">
             <ng-template pTemplate>
-              <img src="assets/images/success.svg" width="32" />
-              <div class="ml-2">Pizza cadastrada com successo!</div>
+              <img src="assets/success.svg" width="32" />
+              <div class="ml-2">Filme cadastrado com successo!</div>
             </ng-template>
           </p-messages>
           <div class="btn-wrapper">
@@ -115,7 +118,7 @@
             <button
               pButton
               pRipple
-              label="Nova Pizza"
+              label="Novo Filme"
               icon="pi pi-plus"
               class="w-6 p-button-help"
               (click)="newForm()"
@@ -124,7 +127,6 @@
         </div>
 
         <!-- <p>{{ movieForm.value | json }}</p> -->
-        
       </div>
     </div>
   </div>
