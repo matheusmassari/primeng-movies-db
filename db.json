@@ -124,6 +124,17 @@
       ],
       "image_url": "https://m.media-amazon.com/images/M/MV5BM2IyOGQ2OGYtODZiZC00ODVhLTliMTAtODlmNDA0ODRiMGYwXkEyXkFqcGdeQXVyMjc1NDA2OA@@._V1_.jpg",
       "id": 11
+    },
+    {
+      "original_title": "Spirited Away",
+      "overview": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+      "rating": "8.6",
+      "genre": [
+        "Animation",
+        "Fantasy"
+      ],
+      "image_url": "https://m.media-amazon.com/images/I/71Nq-vqP0QL._AC_SL1500_.jpg",
+      "id": 12
     }
   ]
 }
